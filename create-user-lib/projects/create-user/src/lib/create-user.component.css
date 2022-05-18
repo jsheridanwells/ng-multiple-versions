@@ -1,0 +1,14 @@
+.create-user-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.create-user-col {
+  width: 50%;
+  padding: 1rem;
+  border: 1px solid black;
+}
+
+.buttons-row {
+  padding: 1rem;
+}

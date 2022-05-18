@@ -1,0 +1,9 @@
+<div class="get-users-container">
+  <div class="user" *ngFor="let user of users">
+    <h2>
+      {{ user.firstName }} {{ user.lastName }}
+    </h2>
+    <p>{{ user.email }}</p>
+    <img src="{{ user.avatar }}" alt="{{user.firstName}} {{user.lastName}} Avatar">
+  </div>
+</div>

@@ -1,0 +1,14 @@
+.footer-container {
+  background-color: #555555;
+  padding: 0.2rem;
+}
+
+p {
+  text-align: right;
+  margin-right: 1rem;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}

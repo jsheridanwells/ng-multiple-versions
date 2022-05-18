@@ -1,0 +1,51 @@
+<div class="create-user-container">
+  <div class="create-user-col form-side">
+    <h2>Create a New User</h2>
+    <form #userForm="ngForm">
+      <div class="form-group">
+        <label for="first-name">First Name</label>
+        <input type="text" name="first-name" id="first-name" class="form-control"
+          [(ngModel)]="newUser.firstName"
+          #firstName="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="last-name">Last Name</label>
+        <input type="text" name="last-name-name" id="last-name-name" class="form-control"
+          [(ngModel)]="newUser.lastName"
+          #lastName="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email" class="form-control"
+          [(ngModel)]="newUser.email"
+          #email="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="avatar">Avatar URL</label>
+        <input type="text" name="avatar" id="avatar" class="form-control"
+          [(ngModel)]="newUser.avatar"
+          #avatar="ngModel">
+      </div>
+      <div class="buttons-row">
+        <button class="btn btn-primary"
+          (click)="onSubmit(); userForm.reset()">
+          Create a New User
+        </button>
+        <button class="btn"
+          (click)="userForm.reset()">
+          Reset
+        </button>
+      </div>
+    </form>
+  </div>
+  <div class="create-user-col display-side">
+    <div class="created-user-display" *ngIf="createdUser">
+      <div class="field"><strong>First Name: </strong>{{ createdUser.firstName }}</div>
+      <div class="field"><strong>Last Name: </strong>{{ createdUser.lastName }}</div>
+      <div class="field"><strong>Email: </strong>{{ createdUser.email }}</div>
+      <div class="field">
+        <img src="{{ createdUser.avatar }}" alt="{{ createdUser.firstName }} {{ createdUser.lastName }} Avatar">
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+.get-users-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.user {
+  margin: 1rem;
+  padding: 2rem;
+  border: 1px solid grey;
+}
+
+img {
+  margin: auto;
+}

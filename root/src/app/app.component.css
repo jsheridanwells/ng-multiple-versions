@@ -1,0 +1,10 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.app-main {
+  flex: auto;
+  padding-left: 0.2rem;
+}
