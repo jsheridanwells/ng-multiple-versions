@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { GetUsersModule } from 'get-users';
 import { CreateUserModule } from 'create-user';
 import { AppComponent } from './app.component';
@@ -18,6 +18,7 @@ import { FooterComponent } from './footer/footer.component';
     CreateUserModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

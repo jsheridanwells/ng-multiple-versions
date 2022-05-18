@@ -2,9 +2,6 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  template: '<lib-get-users></lib-get-users>'
 })
-export class AppComponent {
-  title = 'get-users-lib';
-}
+export class AppComponent {  }
