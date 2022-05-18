@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import 'get-users/elements/elements';
+import 'get-users/elements';
+import 'create-user/elements';
 
 @Component({
   selector: 'app-root',

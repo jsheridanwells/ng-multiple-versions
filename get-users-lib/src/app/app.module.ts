@@ -14,7 +14,6 @@ import { AppComponent } from './app.component';
     GetUsersModule
   ],
   providers: [],
-  // bootstrap: [AppComponent]
   entryComponents: [AppComponent]
 })
 export class AppModule {
