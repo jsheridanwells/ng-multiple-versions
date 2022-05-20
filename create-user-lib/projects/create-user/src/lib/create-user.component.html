@@ -20,12 +20,12 @@
           [(ngModel)]="newUser.email"
           #email="ngModel">
       </div>
-      <div class="form-group">
+      <!-- <div class="form-group">
         <label for="avatar">Avatar URL</label>
         <input type="text" name="avatar" id="avatar" class="form-control"
           [(ngModel)]="newUser.avatar"
           #avatar="ngModel">
-      </div>
+      </div> -->
       <div class="buttons-row">
         <button class="btn btn-primary"
           (click)="onSubmit(); userForm.reset()">
@@ -43,9 +43,9 @@
       <div class="field"><strong>First Name: </strong>{{ createdUser.firstName }}</div>
       <div class="field"><strong>Last Name: </strong>{{ createdUser.lastName }}</div>
       <div class="field"><strong>Email: </strong>{{ createdUser.email }}</div>
-      <div class="field">
+      <!-- <div class="field">
         <img src="{{ createdUser.avatar }}" alt="{{ createdUser.firstName }} {{ createdUser.lastName }} Avatar">
-      </div>
+      </div> -->
     </div>
   </div>
 </div>

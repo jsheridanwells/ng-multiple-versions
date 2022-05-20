@@ -1,6 +1,5 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators'
 import { NewUser } from './new-user';
 import { UserResponse } from './user-response';
@@ -10,12 +9,8 @@ import { UserResponse } from './user-response';
 })
 export class CreateUserService {
 
-  constructor(
-    private http: HttpClient
-  ) { }
-
   createUserInApi(newUser: NewUser): Observable<UserResponse> {
-    return this.http.post<UserResponse>('https://reqres.in/api/users', newUser.payload)
+    return of(this.generateUserResponse(newUser))
       .pipe(map(res => {
         const user = new UserResponse();
         user.firstName = res['first_name'];
@@ -27,4 +22,9 @@ export class CreateUserService {
         return user;
       }));
   }
+
+  private generateUserResponse(newUser: NewUser): any {
+    return newUser.payload;
+  }
 }
+
